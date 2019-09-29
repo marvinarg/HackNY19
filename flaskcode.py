@@ -1,6 +1,13 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
+
 #@app.route('/')
 #@app.route('/index', methods=["GET", "POST"])
 #def index():
@@ -11,9 +18,9 @@ app = Flask(__name__)
         #return str(data)
 
 
-@app.route('/game')
-def game():
-    return render_template('game.html')
+#@app.route('/game')
+#def game():
+    #return render_template('game.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+    #app.run(debug=True)
